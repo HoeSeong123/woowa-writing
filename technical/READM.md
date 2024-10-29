@@ -99,7 +99,7 @@ AWS 콘솔 창에서 대상 그룹을 검색 후 대상 그룹을 생성해보�
 ![img_10.png](img_10.png)
 
 ### Security Group & Listeners and Routing
-Security Group(보안그룹)은 임의의 protocol과 port로의 요청을 어떻게 처리할 것인지에 대한 규정을 담고 있다. ec2 인스턴스와 동일한 정책을 사용하기 위해서는 ec2 인스턴스에 할당한 보안그룹을 선택해도 된다. 나는 우아한테크코스에서 제시간대로 project-public을 사용하였다.
+Security Group(보안그룹)은 임의의 protocol과 port로의 요청을 어떻게 처리할 것인지에 대한 규정을 담고 있다. ec2 인스턴스와 동일한 정책을 사용하기 위해서는 ec2 인스턴스에 할당한 보안그룹을 선택해도 된다. 나는 우아한테크코스에서 제시한대로 project-public을 사용하였다.
 
 Listeners and Routing은 생성중인 ALB 가 몇번 port로 들어오는 어떤 protocol의 요청을 어떻게 처리 할지 설정하는 것이다. 나는 80번 포트로 들어오는 http 요청과 443 번 포트로 들어오는 https 요청에 대해 기본 작업으로 이전에 생성한 2024-code-zap-lb-group으로 요청을 포워딩하도록 설정하였다. 하지만 이렇게 설정해 놓으면 80번 포트로 들어오는 비암호화된 요청이 들어오게 되므로 뒤에서 80번 포트로 들어오는 http 요청에 대한 라우팅 정책을 변경 할 것이다.
 
